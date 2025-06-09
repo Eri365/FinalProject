@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>即時睡眠呼吸中止症監測</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+        .card {
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .status-good {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .status-bad {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        canvas {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card text-center">
+        <h1 class="mb-4">睡眠呼吸中止症偵測儀</h1>
+
+        <h4>目前心跳：</h4>
+        <p id="heartRate" class="display-4 text-primary">-- bpm</p>
+
+        <h4>目前狀態：</h4>
+        <p id="apneaStatus" class="h4">--</p>
+
+        <p class="text-muted mt-4">資料每 1 秒自動更新</p>
+
+        <canvas id="heartRateChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
