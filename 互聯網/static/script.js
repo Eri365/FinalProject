@@ -22,8 +22,8 @@ async function fetchStatus() {
     }
 }
 
-// 每 2 秒更新一次畫面
-setInterval(fetchStatus, 2000);
+// 每 1 秒更新一次畫面
+setInterval(fetchStatus, 1000);
 
 // 初始化時也先抓一次
 fetchStatus();
